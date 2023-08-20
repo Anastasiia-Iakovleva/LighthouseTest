@@ -46,7 +46,7 @@ node('perf-testing-node'){
 
  
 
-                DOCKER_CMD = "docker run --rm -v $WORKSPACE/testResults:$PWD/reports -w "$PWD" ibombit/lighthouse-puppeteer-chrome:latest node <FileName.js> --outputFolder ${RESULTS_DIR}-n ${ITERATIONS}" 
+                DOCKER_CMD = "docker run --rm -v $WORKSPACE/testResults:$PWD/reports -w "$PWD" ibombit/lighthouse-puppeteer-chrome:latest node puppeteer.js --outputFolder ${RESULTS_DIR}-n ${ITERATIONS}" 
 
         }
 
