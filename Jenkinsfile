@@ -26,9 +26,11 @@ node {
 
         stage('preparation') {
 
-                buildSucceeded = true       
-                bat "mkdir $WORKSPACE\\$BUILD_NUMBER\\testResults\\"				
-
+                buildSucceeded = true  
+				
+				bat "npm cache clean --force"
+				bat "npm install puppeteer"
+			    bat "npm install lighthouse@9.6.8"
         }
 
         stage('runShell') {
