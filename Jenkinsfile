@@ -31,6 +31,7 @@ node {
 				bat "npm cache clean --force"
 				bat "npm install puppeteer"
 			    bat "npm install lighthouse@9.6.8"
+				bat "npm i puppeteer-chromium-resolver"
         }
 
         stage('runShell') {
