@@ -52,7 +52,7 @@ node('perf-testing-node'){
 
         stage('runShell') {
 
-                print "---------- Running tests ----------
+                print "---------- Running tests ----------"
 
                  try {
 
