@@ -46,7 +46,7 @@ node {
 
  
 
-                DOCKER_CMD = "docker run --rm -v $WORKSPACE/testResults:$PWD/reports -w "$PWD" ibombit/lighthouse-puppeteer-chrome:latest node puppeteer.js --outputFolder ${RESULTS_DIR}-n ${ITERATIONS}" 
+                DOCKER_CMD = "docker run --rm -v $WORKSPACE/testResults:$WORKSPACE/reports -w "$WORKSPACE" ibombit/lighthouse-puppeteer-chrome:latest node puppeteer.js --outputFolder ${RESULTS_DIR}-n ${ITERATIONS}" 
 
         }
 
@@ -70,7 +70,7 @@ node {
 
         stage('copyResults') {
 
-                bat "rsync -r ${PWD}/testResults/* /opt/sitespeed-result/"
+                bat "move $WORKSPACE\\testResults\\* \\opt\\sitespeed-result\\"
 
         }
 
@@ -90,7 +90,7 @@ node {
 
         stage('publishReport') {
 
-                archiveArtifacts allowEmptyArchive: true, artifacts: "${RESULTS_DIR}/**/*", onlyIfSuccessful: false
+                archiveArtifacts allowEmptyArchive: true, artifacts: "${RESULTS_DIR}\\**\\*", onlyIfSuccessful: false
 
                 publishHTML([
 
