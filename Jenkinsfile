@@ -39,7 +39,7 @@ node {
 
                  try {
 
-                    bat "node puppeteer.js"
+                    bat "node example.js"
 
                 } catch (err) {
 
