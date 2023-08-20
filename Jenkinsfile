@@ -22,7 +22,7 @@ node {
 
                 git branch: 'main',
 
-                url: 'git@github.com:Anastasiia-Iakovleva/LighthouseTest.git'
+                url: 'https://github.com/Anastasiia-Iakovleva/LighthouseTest.git'
 
         }
 
