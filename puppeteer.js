@@ -31,10 +31,10 @@ const waitTillHTMLRendered = async (page, timeout = 30000) => {
 
 async function captureReport() {
 	//const browser = await puppeteer.launch({args: ['--allow-no-sandbox-job', '--allow-sandbox-debugging', '--no-sandbox', '--disable-gpu', '--disable-gpu-sandbox', '--display', '--ignore-certificate-errors', '--disable-storage-reset=true']});
-	const browserFetcher = puppeteer.createBrowserFetcher();
-      let revisionInfo = await browserFetcher.download('1095492');
+	
+	//const browserFetcher = puppeteer.createBrowserFetcher();
+    //  let revisionInfo = await browserFetcher.download('1095492');
     const browser =await puppeteer.launch({
-          executablePath: revisionInfo.executablePath,
           ignoreDefaultArgs: ['--disable-extensions'],
           headless: true,
           args: ['--no-sandbox', "--disabled-setupid-sandbox"]
