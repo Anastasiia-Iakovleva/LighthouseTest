@@ -1,4 +1,4 @@
-node('perf-testing-node'){
+node {
 
         properties(
 
